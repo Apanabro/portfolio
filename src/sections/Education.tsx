@@ -13,7 +13,7 @@ const HL = styled("li", { fontSize:"$sm", color:"$textMuted", "&::before":{ cont
 
 export default function Education() {
   return (
-    <AnimatedSection id="education" className="container" style={{ padding:"$16 0" }}>
+    <AnimatedSection id="education" className="container" >
       <Title>Education</Title>
       <Grid>
         {portfolio.education.map((e,i) => (
