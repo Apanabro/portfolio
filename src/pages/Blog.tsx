@@ -13,7 +13,7 @@ export default function Blog() {
       <Title>Blog</Title>
       <Subtitle>Thoughts, tutorials, and insights on web development</Subtitle>
       <Grid>
-        {portfolio.blogPosts.map((p,i) => <BlogCard key={i} {...p} />)}
+        {portfolio.blogPosts.map((p,i) => <BlogCard key={i} title={p.title} excerpt={p.excerpt} date={p.date} readTime={p.readTime} category={p.category} slug={p.slug} />)}
       </Grid>
     </AnimatedSection>
   )
