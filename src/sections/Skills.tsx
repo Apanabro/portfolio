@@ -18,7 +18,7 @@ export default function Skills() {
   const filtered = active === "All" ? portfolio.skills : portfolio.skills.filter(s => s.category === active)
 
   return (
-    <Section id="skills" className="container" style={{ padding:"$16 0" }}>
+    <Section id="skills" className="container">
       <Title>Skills & Technologies</Title>
       <Subtitle>Technologies I work with on a daily basis</Subtitle>
       <Filters>
