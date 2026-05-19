@@ -9,7 +9,7 @@ const Wrap = styled("div", { display:"flex", justifyContent:"center" })
 
 export default function GitHubGraph() {
   return (
-    <AnimatedSection id="" className="container" style={{ padding:"$16 0" }}>
+    <AnimatedSection id="" className="container" >
       <Title>Contribution Activity</Title>
       <Subtitle>My daily coding activity over the past year</Subtitle>
       <Wrap><ContributionGraph username={portfolio.githubUsername} /></Wrap>
