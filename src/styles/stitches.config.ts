@@ -19,3 +19,12 @@ export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme
     transitions: { default:"200ms ease",smooth:"300ms cubic-bezier(0.4,0,0.2,1)" },
   },
 })
+
+export const lightTheme = createTheme({
+  colors: {
+    bg: "#f8f8fc", bgCard: "#ffffff", bgHover: "#f0f0f5",
+    text: "#1a1a2e", textMuted: "#555570", textDim: "#8888a0",
+    border: "#e2e2e8", borderLight: "#d0d0da",
+    glass: "rgba(248,248,252,0.85)", glassBorder: "rgba(0,217,255,0.1)",
+  },
+})
