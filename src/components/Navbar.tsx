@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { styled } from "../styles/stitches.config"
-import { useTheme } from "../hooks/useTheme"
 import { useScrollSpy } from "../hooks/useScrollSpy"
 
 const Nav = styled("nav", {
