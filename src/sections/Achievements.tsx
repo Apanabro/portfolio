@@ -12,7 +12,7 @@ const AchDesc = styled("p", { fontSize:"$xs", color:"$textMuted" })
 
 export default function Achievements() {
   return (
-    <AnimatedSection id="achievements" className="container" style={{ padding:"$16 0" }}>
+    <AnimatedSection id="achievements" className="container" >
       <Title>Achievements</Title>
       <Grid>
         {portfolio.achievements.map((a,i) => (
