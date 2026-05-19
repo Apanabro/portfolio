@@ -16,7 +16,7 @@ export default function Projects() {
   const filtered = filter === "All" ? portfolio.projects : portfolio.projects.filter(p => p.tech.includes(filter))
 
   return (
-    <AnimatedSection id="projects" className="container" style={{ padding:"$16 0" }}>
+    <AnimatedSection id="projects" className="container" >
       <Title>Projects</Title>
       <Subtitle>Things I've built and contributed to</Subtitle>
       <Filters>
