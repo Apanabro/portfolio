@@ -9,7 +9,7 @@ const Grid = styled("div", { display:"grid", gridTemplateColumns:"repeat(2,1fr)"
 
 export default function Blog() {
   return (
-    <AnimatedSection className="container" style={{ minHeight:"100vh", paddingBottom:"$16" }}>
+    <AnimatedSection className="container" >
       <Title>Blog</Title>
       <Subtitle>Thoughts, tutorials, and insights on web development</Subtitle>
       <Grid>
