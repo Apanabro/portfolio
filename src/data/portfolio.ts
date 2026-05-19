@@ -25,7 +25,7 @@ export const portfolio = {
     { title:"Fingerprint Matcher",description:"Basic fingerprint matcher by manipulating and comparing a large dataset of fingerprints.",tech:["Python","Computer Vision","Database"],github:"#",live:"#",image:"" },
   ],
   education: [
-    { degree:"B.Tech in Computer Engineering",institution:"J.C. Bose University of Science & Technology",period:"2021-2025",description:"CGPA: 6.94/10",highlights:[] },
+    { degree:"B.Tech in Computer Engineering",institution:"J.C. Bose University",period:"2021-2025",description:"CGPA: 6.94/10",highlights:[] },
     { degree:"Class 12",institution:"Kendriya Vidyalaya Shivgarh",period:"2021",description:"Percentage: 86.80%",highlights:[] },
     { degree:"Class 10",institution:"Amity International School",period:"2019",description:"Percentage: 79.40%",highlights:[] },
   ],
@@ -34,6 +34,9 @@ export const portfolio = {
     { title:"Coordinator",description:"National Service Scheme",icon:"🤝" },
     { title:"Campus Ambassador",description:"IIT Delhi",icon:"🎓" },
     { title:"Gold Medalist",description:"Volleyball at School Level",icon:"🏐" },
+    { title:"IoT Certification",description:"NPTEL Certification",icon:"📜" },
+    { title:"Cloud Certification",description:"Google Cloud Study Jam",icon:"☁️" },
+    { title:"Cybersecurity",description:"Introduction to Cybersecurity",icon:"🛡️" },
   ],
   blogPosts: [],
 }
