@@ -7,13 +7,15 @@ const Title = styled("h1", { fontSize:"$4xl", textAlign:"center", marginBottom:"
 const Subtitle = styled("p", { fontSize:"$sm", color:"$textMuted", textAlign:"center", marginBottom:"$10" })
 const Grid = styled("div", { display:"grid", gridTemplateColumns:"repeat(2,1fr)", gap:"$6", "@media(max-width:600px)":{ gridTemplateColumns:"1fr" } })
 
+interface BlogPost { title: string; excerpt: string; date: string; readTime: string; category: string; slug: string }
+
 export default function Blog() {
   return (
-    <AnimatedSection className="container" >
+    <AnimatedSection className="container" style={{ minHeight:"100vh", paddingBottom:"$16" }}>
       <Title>Blog</Title>
       <Subtitle>Thoughts, tutorials, and insights on web development</Subtitle>
       <Grid>
-        {portfolio.blogPosts.map((p,i) => <BlogCard key={i} title={p.title} excerpt={p.excerpt} date={p.date} readTime={p.readTime} category={p.category} slug={p.slug} />)}
+        {(portfolio.blogPosts as BlogPost[]).map((p,i) => <BlogCard key={i} title={p.title} excerpt={p.excerpt} date={p.date} readTime={p.readTime} category={p.category} slug={p.slug} />)}
       </Grid>
     </AnimatedSection>
   )

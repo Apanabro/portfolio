@@ -8,12 +8,12 @@ const Info = styled("div", { textAlign:"center", marginBottom:"$8", color:"$text
 
 export default function Contact() {
   return (
-    <AnimatedSection className="container" >
+    <AnimatedSection className="container" style={{ minHeight:"100vh", paddingBottom:"$16" }}>
       <Title>Get In Touch</Title>
       <Subtitle>Have a project in mind? Let's build something together</Subtitle>
       <Info>
-        <p>📧 jitendra@example.com</p>
-        <p>📍 India</p>
+        <p>?? jitendra@example.com</p>
+        <p>?? India</p>
       </Info>
       <ContactForm />
     </AnimatedSection>
