@@ -9,7 +9,7 @@ const Timeline = styled("div", { maxWidth:"600px", margin:"0 auto" })
 
 export default function Experience() {
   return (
-    <AnimatedSection id="experience" className="container" style={{ padding:"$16 0" }}>
+    <AnimatedSection id="experience" className="container" >
       <Title>Experience</Title>
       <Subtitle>My professional journey so far</Subtitle>
       <Timeline>
