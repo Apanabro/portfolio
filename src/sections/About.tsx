@@ -7,7 +7,7 @@ export default function About() {
     <AnimatedSection id="about" className="container">
       <div className="about-grid">
         <motion.div className="about-avatar" initial={{ scale:0 }} whileInView={{ scale:1 }} viewport={{ once:true }} transition={{ type:"spring", stiffness:200 }}>
-          JY
+          <img src="/avatar.png" alt="Jitendra Yadav" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
         </motion.div>
         <div className="about-bio">
           <h2 className="about-name">About Me</h2>
