@@ -2,9 +2,9 @@
 
 Jitendra Yadav - Portfolio Website
 
-## ?? Live Portfolio
+##  Live Portfolio
 
-**[?? View My Portfolio](https://apanabro.github.io/portfolio/)**
+**[ View My Portfolio](https://apanabro.github.io/portfolio/)**
 
 ---
 
