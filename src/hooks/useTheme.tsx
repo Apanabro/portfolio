@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react"
-import { lightTheme } from "../styles/stitches.config"
 
 type Theme = "dark" | "light"
 interface ThemeCtx { theme: Theme; toggle: () => void }
@@ -12,8 +11,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const root = document.documentElement
-    if (theme === "light") { root.classList.add(lightTheme.className) }
-    else { root.classList.remove(lightTheme.className) }
+    if (theme === "light") {
+      root.classList.add("light")
+    } else {
+      root.classList.remove("light")
+    }
   }, [theme])
 
   return <ThemeContext.Provider value={{ theme, toggle }}>{children}</ThemeContext.Provider>

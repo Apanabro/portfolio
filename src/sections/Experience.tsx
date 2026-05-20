@@ -1,22 +1,17 @@
-import { styled } from "../styles/stitches.config"
 import { portfolio } from "../data/portfolio"
 import AnimatedSection from "../components/AnimatedSection"
 import TimelineItem from "../components/TimelineItem"
 
-const Title = styled("h2", { fontSize:"$3xl", textAlign:"center", marginBottom:"$2" })
-const Subtitle = styled("p", { fontSize:"$sm", color:"$textMuted", textAlign:"center", marginBottom:"$8" })
-const Timeline = styled("div", { maxWidth:"600px", margin:"0 auto" })
-
 export default function Experience() {
   return (
-    <AnimatedSection id="experience" className="container" >
-      <Title>Experience</Title>
-      <Subtitle>My professional journey so far</Subtitle>
-      <Timeline>
+    <AnimatedSection id="experience" className="container">
+      <h2 className="section-title">Experience</h2>
+      <p className="section-subtitle">My professional journey so far</p>
+      <div className="experience-timeline">
         {portfolio.experience.map((e,i) => (
           <TimelineItem key={i} {...e} />
         ))}
-      </Timeline>
+      </div>
     </AnimatedSection>
   )
 }

@@ -1,11 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import { styled } from "../styles/stitches.config"
-
-const Canvas = styled("canvas", { width:"100%", maxWidth:"720px", height:"120px", borderRadius:"$md" })
-const StatRow = styled("div", { display:"flex", gap:"$6", marginTop:"$4", flexWrap:"wrap" })
-const Stat = styled("div", { textAlign:"center" })
-const StatVal = styled("div", { fontSize:"$2xl", fontWeight:"$bold", color:"$primary" })
-const StatLabel = styled("div", { fontSize:"$xs", color:"$textDim" })
 
 export default function ContributionGraph({ username }: { username: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -18,12 +11,12 @@ export default function ContributionGraph({ username }: { username: string }) {
     if (!ctx) return
 
     canvas.width = 720; canvas.height = 120
-    ctx.fillStyle = "#12121a"; ctx.fillRect(0, 0, 720, 120)
+    ctx.fillStyle = "#f5f5f7"; ctx.fillRect(0, 0, 720, 120)
 
     const cellSize = 11; const gap = 2; const cols = 52; const rows = 7
     let total = 0; let streak = 0; let maxStreak = 0
 
-    ctx.fillStyle = "#1a1a2e"
+    ctx.fillStyle = "#e8e8ed"
     for (let c = 0; c < cols; c++) {
       for (let r = 0; r < rows; r++) {
         const x = c * (cellSize + gap) + 20
@@ -36,12 +29,12 @@ export default function ContributionGraph({ username }: { username: string }) {
           total++
           streak++
         } else {
-          ctx.fillStyle = "#1a1a2e"
+          ctx.fillStyle = "#e8e8ed"
           if (streak > maxStreak) maxStreak = streak
           streak = 0
         }
         ctx.fillRect(x, y, cellSize, cellSize)
-        ctx.fillStyle = "#ffffff08"
+        ctx.fillStyle = "#00000008"
         ctx.fillRect(x, y, cellSize, 1)
       }
     }
@@ -51,11 +44,11 @@ export default function ContributionGraph({ username }: { username: string }) {
 
   return (
     <div>
-      <Canvas ref={canvasRef} />
-      <StatRow>
-        <Stat><StatVal>{stats.total}</StatVal><StatLabel>Total Contributions</StatLabel></Stat>
-        <Stat><StatVal>{stats.streak}</StatVal><StatLabel>Longest Streak (days)</StatLabel></Stat>
-      </StatRow>
+      <canvas ref={canvasRef} className="github-canvas" />
+      <div className="github-stats">
+        <div className="github-stat"><div className="github-stat-value">{stats.total}</div><div className="github-stat-label">Total Contributions</div></div>
+        <div className="github-stat"><div className="github-stat-value">{stats.streak}</div><div className="github-stat-label">Longest Streak (days)</div></div>
+      </div>
     </div>
   )
 }

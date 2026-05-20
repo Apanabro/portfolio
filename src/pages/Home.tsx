@@ -1,4 +1,3 @@
-import { styled } from "../styles/stitches.config"
 import Hero from "../sections/Hero"
 import About from "../sections/About"
 import Skills from "../sections/Skills"
@@ -8,25 +7,23 @@ import Education from "../sections/Education"
 import Achievements from "../sections/Achievements"
 import GitHubGraph from "../sections/GitHubGraph"
 
-const Divider = styled("div", { height:"1px", background:"linear-gradient(90deg,transparent,$borderLight,transparent)", margin:"0 auto", maxWidth:"600px" })
-
 export default function Home() {
   return (
     <>
       <Hero />
-      <Divider />
+      <div style={{ height:"1px", background:"linear-gradient(90deg,transparent,var(--border-light),transparent)", margin:"0 auto", maxWidth:"600px" }} />
       <About />
-      <Divider />
+      <div style={{ height:"1px", background:"linear-gradient(90deg,transparent,var(--border-light),transparent)", margin:"0 auto", maxWidth:"600px" }} />
       <Skills />
-      <Divider />
+      <div style={{ height:"1px", background:"linear-gradient(90deg,transparent,var(--border-light),transparent)", margin:"0 auto", maxWidth:"600px" }} />
       <Experience />
-      <Divider />
+      <div style={{ height:"1px", background:"linear-gradient(90deg,transparent,var(--border-light),transparent)", margin:"0 auto", maxWidth:"600px" }} />
       <Projects />
-      <Divider />
+      <div style={{ height:"1px", background:"linear-gradient(90deg,transparent,var(--border-light),transparent)", margin:"0 auto", maxWidth:"600px" }} />
       <Education />
-      <Divider />
+      <div style={{ height:"1px", background:"linear-gradient(90deg,transparent,var(--border-light),transparent)", margin:"0 auto", maxWidth:"600px" }} />
       <Achievements />
-      <Divider />
+      <div style={{ height:"1px", background:"linear-gradient(90deg,transparent,var(--border-light),transparent)", margin:"0 auto", maxWidth:"600px" }} />
       <GitHubGraph />
     </>
   )
