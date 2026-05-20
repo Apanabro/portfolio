@@ -13,6 +13,8 @@ export default function Hero() {
 
   return (
     <section className="hero-section" id="hero">
+      <img src="/hero_bg.png" alt="Workspace" className="hero-bg-image" />
+      <div className="hero-bg-overlay" />
       <div className="hero-orb" /><div className="hero-orb-2" />
       <div className="hero-content">
         <motion.p className="hero-greeting" initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ delay:0.2 }}>
